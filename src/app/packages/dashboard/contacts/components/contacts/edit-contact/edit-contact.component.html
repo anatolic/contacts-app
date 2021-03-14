@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Edit contact</h1>
+
+<form [formGroup]="editContactForm">
+  <div mat-dialog-content>
+    <mat-form-field appearance="legacy">
+      <mat-label>Edit name</mat-label>
+      <input matInput
+             formControlName="name"
+             placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Edit address</mat-label>
+      <input matInput
+             formControlName="address"
+             placeholder="Placeholder">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="editContactForm.value" cdkFocusInitial>Ok</button>
+  </div>
+</form>
